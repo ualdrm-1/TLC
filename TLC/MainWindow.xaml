@@ -1,0 +1,64 @@
+﻿<Window x:Class="TLC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TLC"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="TLE Launcher" Width="926" Height="550"
+        WindowStartupLocation="CenterScreen" Icon="C:\Users\Huawei\Downloads\pngwing.com.png"
+        ResizeMode="NoResize"
+        Name ="MainMenu">
+    <Window.Background>
+        <ImageBrush ImageSource="images/black-fone.png"/>
+    </Window.Background>
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row =" 0" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="6" gif:ImageBehavior.AnimatedSource="images/gif-f.gif" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="True"/>
+        <TextBlock Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Text="THE LAST CHANCE" FontSize="55" Foreground="#FF1FD7FF" Margin="108,45,0,0" FontFamily="Magma">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Opacity="75" Direction="240" RenderingBias="Quality" ShadowDepth="15">
+                </DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Grid.Row="4" Grid.RowSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Magma" FontSize="20" Text="UALDRM">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Opacity="100" Direction="-90" RenderingBias="Quality" ShadowDepth="10">
+                </DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Name="PLAY_BUTTON" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="5" FontFamily="Magma" Content="PLAY" FontSize="39" Background="Transparent" Foreground="#FF3C86FF" Margin="90,0,0,0" Padding="1,1,1,1" VerticalAlignment="Bottom" HorizontalAlignment="Center" BorderBrush="Transparent" FontWeight="Bold" Click="PLAY_BUTTON_Click">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="0" ShadowDepth="10" Opacity="100"></DropShadowBitmapEffect>
+            </Button.BitmapEffect>
+        </Button>
+        <Button Name="SETTINGS_BUTTON" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" FontFamily="Magma" Content="SETTINGS" FontSize="39" Background="#00DDDDDD" Foreground="#FF3C86FF" Margin="90,0,0,0" Padding="1,1,1,1" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Transparent" FontWeight="Bold" Click="SETTINGS_BUTTON_Click">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="0" ShadowDepth="10" Opacity="100"></DropShadowBitmapEffect>
+            </Button.BitmapEffect>
+        </Button>
+        <Button Name="EXITBUTTON" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="5" FontFamily="Magma" Content="EXIT" FontSize="39" Background="#00DDDDDD" Foreground="#FF3C86FF" Margin="90,0,0,0" Padding="1,1,1,1" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="Transparent" FontWeight="Bold">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="0" ShadowDepth="10" Opacity="100"></DropShadowBitmapEffect>
+            </Button.BitmapEffect>
+        </Button>
+        <local:Settings x:Name="settings" Visibility="Collapsed" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6"></local:Settings>
+        <local:BeforeStart x:Name="BeforeSt" Visibility="Collapsed" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6"></local:BeforeStart>
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="TLC.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TLC"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Name="GameItSelf"
+        Title="MainWindow" Width="1000" Height="580"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen" Icon="C:\Users\Huawei\Downloads\pngwing.com.png"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Canvas x:Name="MyCanvas" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Focusable="True">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/fone.png"/>
+        </Canvas.Background>
+        <Image Width="994" Height="460"  gif:ImageBehavior.AnimatedSource="D:\studies\TLC\TLC\images\snowgif.gif" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="True" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="9" Canvas.Left="10"/>
+        <Rectangle Name="ground" Width="1920" Height="100" HorizontalAlignment="Center" Canvas.Top="697" VerticalAlignment="Top"/>
+        <Rectangle Name="tower" Width="218" Height="300" Canvas.Top="234" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="-6">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/tower.png" Stretch="UniformToFill" TileMode="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="Press ENTER to start" Canvas.Left="374" Canvas.Top="250" FontFamily="Magma" FontSize="36" Name="PressEnter" Visibility="Visible"></TextBlock>
+        <TextBlock Text="Pause" Canvas.Left="457" Canvas.Top="250" FontFamily="Magma" FontSize="36" Name="PauseGame" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="YOU WIN" FontFamily="Magma" FontSize="36" Name="WINGAME" Canvas.Left="442" Canvas.Top="250" Visibility="Collapsed"></TextBlock>
+        <TextBlock Text="YOU LOSE" FontFamily="Magma" FontSize="36" Name="LOSEGAME" Canvas.Left="442" Canvas.Top="250" Visibility="Collapsed"></TextBlock>
+        <TextBlock Text="press ESC to exit" Name="EXIT_GAME" FontFamily="Magma" FontSize="20" Canvas.Left="444" Canvas.Top="290" Visibility="Collapsed"></TextBlock>
+        <Image Name="player" Width="130" Height="101" Canvas.Left="206" Canvas.Top="366" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"></Image>
+        <Image Name="flag" Width="47" Height="45" Canvas.Left="135" Canvas.Top="188" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+        <Label Name="TimerLabel" Content="0" FontFamily="Matura MT Script Capitals" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="479" Canvas.Top="-6" ></Label>
+        <Button Name="Close_Game" Width="61" Height="58" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Close_Game_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Cursor="Arrow">
+            <Button.Background>
+                <ImageBrush ImageSource="/free-icon-close-cross-in-circular-outlined-interface-button-58253.png"/>
+            </Button.Background>
+        </Button>
+        <CheckBox Name="Pause_Game" Width="20" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="913" Canvas.Top="-16" Checked="Pause_Game_Checked" Unchecked="isUnchecked" Cursor="Arrow" Focusable="False" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <CheckBox.Background>
+                <ImageBrush ImageSource="/video-pause-button.png"/>
+            </CheckBox.Background>
+            <!--<.Background>
+                <ImageBrush ImageSource="/video-pause-button.png"/>
+            </Button.Background>-->
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="6" ScaleY="9" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <ProgressBar Name="HealthBar" Width="218" Height="36" Canvas.Top="121" HorizontalAlignment="Center" VerticalAlignment="Top" Value="100" FontFamily="Magma" FontSize="20"/>
+        <Label Name="Score" Width="200" Height="70" Canvas.Left="1353" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" FontFamily="Magma"></Label>
+        <ProgressBar x:Name="HealthBar_Copy" Width="131" Height="15" Canvas.Top="346" Value="100" FontFamily="Magma" FontSize="0.01" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="206" Background="#FFA40000" Foreground="#FFCC6A13"/>
+    </Canvas>
+</Window>

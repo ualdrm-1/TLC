@@ -1,0 +1,196 @@
+﻿<UserControl x:Class="TLC.BeforeStart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TLC"
+             mc:Ignorable="d" 
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             d:DesignHeight="550" d:DesignWidth="926">
+    <Grid Background="BlanchedAlmond">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row =" 0" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="6" gif:ImageBehavior.AnimatedSource="images/gif-f.gif" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="True" Cursor="Hand"/>
+        <Button Content="BACK TO MENU" FontSize="40" Click="Button_Click" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" FontFamily="Magma" Background="#00DDDDDD" Foreground="#FF3C86FF" HorizontalAlignment="Center" BorderBrush="Transparent" FontWeight="Bold" Height="50">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="75" Direction="240" RenderingBias="Quality" ShadowDepth="15">
+                </DropShadowEffect>
+            </Button.Effect>
+        </Button>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="2" Text="CREATE A CHARACTER" FontFamily="Magma" FontSize="45" Foreground="#FF1FD7FF" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Opacity="75" Direction="240" RenderingBias="Quality" ShadowDepth="15">
+                </DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <CheckBox x:Name="Male" Content="Male" Cursor="Hand" Width="15" BorderBrush="#FF2FA3F0" RenderTransformOrigin="0.259,0.234" Margin="142,51,0,0" Grid.Column="1" IsChecked="False" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="Male_Checked" Grid.ColumnSpan="2" IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="Female" Content="Female" Cursor="Hand" Width="15" BorderBrush="#FF2FA3F0" RenderTransformOrigin="0.259,0.234" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="5" VerticalAlignment="Top" Checked="Female_Checked" IsChecked="False" Margin="0,51,1,0">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="MALE" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,55,0,0" RenderTransformOrigin="0.505,0.374">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0017FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip">
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ToolTip.Style>
+                    <TextBlock Background="#00DDDDDD">
+                    <Run FontFamily="Magma" Background="#00DDDDDD" Foreground="Blue">WILL BE SOON</Run>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        <TextBlock Text="FEMALE" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,54,63,0">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0074FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip">
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ToolTip.Style>
+                    <TextBlock Background="#00DDDDDD">
+                    <Run FontFamily="Magma" Background="#00DDDDDD" Foreground="Blue" Cursor="Hand">FEMALE CHARACTER</Run>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        <TextBlock Text="NAME" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,26,0,0">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0074FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <RichTextBox x:Name="PlayerName" TextChanged="PlayerName_TextChanged"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" VerticalAlignment="Top" Height="27" FontFamily="Magma" FontSize="24" UndoLimit="20" Margin="122,59,122,0">
+            <RichTextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5F7381"/>
+                    <GradientStop Color="#FF56AAE2" Offset="1"/>
+                </LinearGradientBrush>
+            </RichTextBox.Background>
+            <FlowDocument TextAlignment="Center">
+            </FlowDocument>
+        </RichTextBox>
+        <Button Name ="Start" Content="START" FontSize="30" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" FontFamily="Magma" Background="#00DDDDDD" Foreground="#FF0061FF" HorizontalAlignment="Center" BorderBrush="Transparent" FontWeight="Bold" Height="30" VerticalAlignment="Center" Click="Button_Click_1">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="75" Direction="240" RenderingBias="Quality" ShadowDepth="15">
+                </DropShadowEffect>
+            </Button.Effect>
+        </Button>
+        <CheckBox x:Name="Easy" Content="Male" Cursor="Hand" Width="15" BorderBrush="#FF2FA3F0" RenderTransformOrigin="0.259,0.234" Grid.Column="1" IsChecked="False" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="Easy_Checked" Grid.ColumnSpan="2" Margin="0,0,170,0">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.7" ScaleY="1.7" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="Normal" Content="Male" Cursor="Hand" Width="15" BorderBrush="#FF2FA3F0" RenderTransformOrigin="0.259,0.234" Grid.Column="2" IsChecked="False" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="Normal_Checked" Grid.ColumnSpan="2">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.7" ScaleY="1.7" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="Hard" Content="Male" Cursor="Hand" Width="15" BorderBrush="#FF2FA3F0" RenderTransformOrigin="0.259,0.234" Grid.Column="3" IsChecked="False" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="Hard_Checked" Grid.ColumnSpan="2" Margin="170,0,0,0">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.7" ScaleY="1.7" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="EASY" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,64,63,0" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF88BEFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip">
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ToolTip.Style>
+                    <TextBlock Background="#00DDDDDD">
+                    <Run FontFamily="Magma" Background="#00DDDDDD" Foreground="#FF609AF9">EASY DIFFICULTY FOR NEWBIE :D</Run>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        <TextBlock Text="NORMAL" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,64,0,0" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF88BEFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip">
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ToolTip.Style>
+                    <TextBlock Background="#00DDDDDD">
+                    <Run FontFamily="Magma" Background="#00DDDDDD" Foreground="#FF609AF9">NORMAL DIFFICULTY, ENEMY HAS STANDART SPEED</Run>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        <TextBlock Text="HARD" FontSize="25" Background="#00DDDDDD" FontFamily="Magma" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,64,46,0" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF88BEFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip">
+                            <Setter Property="Background" Value="{x:Null}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ToolTip.Style>
+                    <TextBlock Background="#00DDDDDD">
+                    <Run FontFamily="Magma" Background="#00DDDDDD" Foreground="#FF609AF9">HARD DIFFICULTY FOR TURRETLESS</Run>
+                    </TextBlock>
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+    </Grid>
+</UserControl>

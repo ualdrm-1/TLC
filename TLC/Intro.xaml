@@ -1,0 +1,17 @@
+﻿<Window x:Class="TLC.Intro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TLC"
+        mc:Ignorable="d"
+        Title="Intro" Width="1000" Height="561"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen" Icon="C:\Users\Huawei\Downloads\pngwing.com.png"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Canvas Margin="0,0,0,18" Name="mycanvas">
+        <MediaElement Source="C:\Users\Huawei\Downloads\intro.wmv" Width="1000" Name="intro_game" LoadedBehavior="Manual"></MediaElement>
+        <Button Width="100" Height="50" Content="continue" FontFamily="Magma" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" KeyDown="KeyIsDown" Canvas.Left="890" Canvas.Top="483" Click="Button_Click"/>
+    </Canvas>
+</Window>
